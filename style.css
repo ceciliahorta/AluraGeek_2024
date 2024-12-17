@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --fonte: 'Press Start 2P',  system-ui;
+    --fonte-secundaria: font-family: "Roboto", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-secundaria);
+}
+
+body {
+    height: 100vh;
+    background-color: #e2e8f0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+}
+
+/* Header */
+
+.header {
+    padding: 20px;
+    background-image: url(./img/background.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+#logo-titulo {
+    font-family: var(--fonte);
+    background: linear-gradient(90deg, #c704fc, #9204fc, #2904fc);
+    background-size: 120%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+/* Produtos */
+
+.principal {
+    display: flex;
+    margin: 30px;
+    gap: 30px;
+}
+
+.container-produtos {
+    text-align: center;
+    height: auto;
+    width: 60vw;
+}
+
+#titulo {
+    padding: 0 0 50px;
+    text-align: center;
+    font-size: 2rem;
+    background: linear-gradient(90deg, #c704fc, #9204fc, #2904fc);
+    background-size: 100%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+#mensagem-vazia {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #2904fc;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+#produtos-lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+  
+.card {
+    max-width: 400px; 
+    height: auto;
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  
+.card img {
+    max-width: 380px;
+    width: 100%;
+    max-height: 200px;
+}
+
+.card-container--info {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+  
+.card-container--info h2 {
+    grid-column: 1 / 3;
+    font-size: 1.2rem;
+}
+
+.card-container--info p {
+    font-size: 1.2rem;
+}
+  
+.btn-excluir {
+    grid-column: 2 / 3;
+    justify-self: flex-end;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.btn-excluir img:hover {
+    transform: scale(1.1);
+}
+
+/* Formulário */
+
+.container-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 40vw;
+}
+
+#formulario-produto {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 30px;
+}
+
+.input-produto {
+    padding: 20px;
+    border-radius: 50px;
+    border: solid 1px #2904fc;
+}
+
+.input-produto::placeholder {
+    color: #2904fc;
+    font-size: 1rem;
+    font-style: italic;
+}
+.botoes-formulario {
+    display: flex;
+    gap: 30px;
+}
+
+#btn-adicionar-produto {
+    padding: 15px 23px;
+    border-radius: 50px;
+    border: solid 1px #2904fc;
+    font-size: 1.2rem;
+    width: 50%;
+    background: linear-gradient(90deg, #c704fc, #9204fc, #2904fc);
+    color: #fff;
+    cursor: pointer;
+}
+
+#btn-adicionar-produto:hover {
+    transition: .6s;
+    opacity: .7;
+}
+
+#btn-limpar-formulario {
+    width: 50%;
+    padding: 15px 23px;
+    border-radius: 50px;
+    border: solid 1px #2904fc;
+    font-size: 1.2rem;
+    background-color: #fff;
+    color: #2904fc;
+    cursor: pointer;
+}
+
+#btn-limpar-formulario:hover {
+    transition: .7s;
+    background: #2904fc;
+    color: #fff;
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-image: url(./img//background.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container-footer p {
+    background: linear-gradient(90deg, #c704fc, #9204fc, #2904fc);
+    background-size: 100%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* Responsividade */
+
+@media (max-width: 1400px) {
+    #produtos-lista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1280px) {
+    .principal {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-formulario {
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+        width: 90vw;
+    }
+
+    #titulo {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    #produtos-lista {
+        grid-template-columns: 1fr;
+    }
+
+    #logo-titulo {
+        font-size: 1.5rem;
+    }
+}
